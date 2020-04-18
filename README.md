@@ -40,6 +40,9 @@ Rendez le fichier deputes.py executable (sur ubuntu : clic droit / propiété / 
 POUR UBUNUTU : dans votre dossier : faites clic droit "ouvrir un terminal ici" puis écrivez "./deputes.py"
 Répondez aux deux question :
 entrer le nom du fichier des données des députés (le fichier csv) avec l'extension
+
 > ex : deputes.csv (par defaut)
+
 entrer le nom du fichier mail (le fichier avec votre mail rédigé dans le bon formalisme) avec l'extension
+
 > ex : mail.txt (par defaut)
