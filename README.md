@@ -46,3 +46,5 @@ entrer le nom du fichier des données des députés (le fichier csv) avec l'exte
 entrer le nom du fichier mail (le fichier avec votre mail rédigé dans le bon formalisme) avec l'extension
 
 > ex : mail.txt (par defaut)
+
+Si vous avez entré les bons nom de fichers, vos fichiers txt pour chaque mails sont créés dans le dossier Mails
