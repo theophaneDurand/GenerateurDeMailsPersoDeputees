@@ -33,3 +33,13 @@ Les champs personnalisés sont pour l'instant au nombre de 4 :
 
 À ce jour, il ne faut pas mettre de signe de ponctuation collé à un mot personnalisable.
 > ex : @nom@**,** ne fonctionnera pas.
+
+## Utilisation du script
+Pour utiliser ce script, téléchargez tous les fichiers sur votre ordinateur dans un même dossier.
+Rendez le fichier deputes.py executable (sur ubuntu : clic droit / propiété / Permission / "Allow ewecuting file as program")
+POUR UBUNUTU : dans votre dossier : faites clic droit "ouvrir un terminal ici" puis écrivez "./deputes.py"
+Répondez aux deux question :
+entrer le nom du fichier des données des députés (le fichier csv) avec l'extension
+> ex : deputes.csv (par defaut)
+entrer le nom du fichier mail (le fichier avec votre mail rédigé dans le bon formalisme) avec l'extension
+> ex : mail.txt (par defaut)
