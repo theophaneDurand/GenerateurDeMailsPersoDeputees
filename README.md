@@ -4,10 +4,14 @@ Script python premettant de générer des mails personnalisés pour les député
 ### Fichiers
 Le projet est constitué de trois fichiers : 
 Le fichier deputes.py qui est le scripte python de mon application.
+Un tri des députés est fait en fonction des commission que vous souhaitez. (voir ligne 36 du code)
 
 Le fichier fichier_deputes_commissions.csv ([source : voxpublic.org](https://www.voxpublic.org/IMG/csv/fichier_deputes_commissions.csv))
 
 Le fichier mail.txt qui est le contenu du mail à envoyer
+
+Le script va automatiquement créer un dossier *Mails* à l'emplacement où vous l'executez dans lequel sera stocké les fichiers avec les emails personnélisés (avec comme nom *mailNOMDUDEPUTÉ.txt*
+> ex : mailAdrien Quatennens.txt
 
 ### fichier mail.txt
 Le programme prends en entrée un fichier mails.txt qui doit suivre un certain formalisme.
