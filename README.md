@@ -48,3 +48,8 @@ entrer le nom du fichier mail (le fichier avec votre mail rédigé dans le bon f
 > ex : mail.txt (par defaut)
 
 Si vous avez entré les bons nom de fichers, vos fichiers txt pour chaque mails sont créés dans le dossier Mails
+
+
+Si vous êtes sur windows j'ai pas testé mais voici un site qui explique comment executer un script python sur windows : 
+
+[http://www.ordinateur.cc/programmation/Programmation-Python/93856.html](http://www.ordinateur.cc/programmation/Programmation-Python/93856.html)
