@@ -33,8 +33,6 @@ REPERTOIRMAILS = './Mails/'
 if not os.path.exists(REPERTOIRMAILS):
     os.makedirs(REPERTOIRMAILS)
 
-commissionChoisies = ['Finances de l’économie générale et du contrôle budgétaire', 'Lois', 'Affaires sociales', 'Affaires économiques']
-
 def csv2tab(file):
     tab = []
     with open(file, newline='') as f:
@@ -48,39 +46,51 @@ def modifMail(infoDeput, mail):
     f = open(mail, 'r')
     
     #transformation du fichier mail en tableau de mots
-    tabMotsMail = f.read().split(sep = ' ')
-    
+    messageMail = f.read()
+    mailsCrees = 0
     #On créé un nouveau fichier pour chaque depute
     for depute in infoDeput:
         if(depute[COMMISSION_PERMANENTE] in commissionChoisies):
-            #On boucle sur tous les mots du mails pour modifier ceux à modifier
-            message = ''
-            for mot in tabMotsMail :
-                #modifications a effectuer sur les mots genres
-                if(mot[0] == "#" and mot[-1] == "#"):
-                    if(depute[SEXE] == 'F'):
-                        #on prend la deuxieme ecriture pour le feminin
-                        mot = mot.split(sep='/')[1][:-1]
-                    elif(depute[SEXE] == 'H'):
-                        #on prend la premiere ecriture pour le masculin
-                        mot = mot.split(sep='/')[0][1:]
-                       
-                #On remplace les champs personnalises
-                elif(mot[0] == '@' and mot[-1] == '@'):
-                    if (mot == '@politesse@'):
-                        if (depute[SEXE] == 'F'):
-                            mot = mot.replace('@politesse@', 'madame')
-                        elif (depute[SEXE] == 'H'):
-                            mot = mot.replace('@politesse@', 'monsieur')
-                    if (mot == '@nom@'):
-                        mot = mot.replace('@nom@', depute[NOM])
-                    elif (mot == '@fonction@'):
-                        mot = mot.replace('@fonction@', depute[FONCTION].lower())
-                    elif (mot == '@commission@'):
-                        mot = mot.replace('@commission@', depute[COMMISSION_PERMANENTE].lower())
-                message += mot + ' '
+            
+            #Dictionnaire mettant en relation chemps personnalisés et les données des deputés:
+            donnesDeputes = {}
+            donnesDeputes['@nom@'] = depute[NOM].replace('É', 'E') #Le É fait bugger tout le programme...
+            donnesDeputes['@fonction@'] = depute[FONCTION].lower()
+            donnesDeputes['@commission@'] = depute[COMMISSION_PERMANENTE].lower()
+            if(depute[SEXE] == 'F'):
+                donnesDeputes['@politesse@'] = 'madame'
+            elif(depute[SEXE] == 'H'):
+                donnesDeputes['@politesse@'] = 'monsieur'
+                
+            #On remplace les tag par les données des députés
+            texteMail = messageMail
+            for tag in donnesDeputes.keys():
+                texteMail = texteMail.replace(tag, donnesDeputes[tag])
+            
+            #On s'occupe des mots genrés
+            message = texteMail.split("#")
+            while(len(message) > 1):
+                mot = message[1].split('/')
+                if(depute[SEXE] == 'F'):
+                    message[0] += mot[1]
+                elif(depute[SEXE] == 'H'):
+                    message[0] += mot[0]
+                message.pop(1)
+                message[0] += message[1]
+                message.pop(1)
+                
+            message = message[0]
             nomDuNouveaufichierTexte = "{}mail{}.txt".format(REPERTOIRMAILS, depute[NOM])
             newMail = open(nomDuNouveaufichierTexte, 'w')
             newMail.write(message)
             newMail.close()
+            mailsCrees +=1
+            print("Création du fichier {} réussie".format(nomDuNouveaufichierTexte))
+    return(mailsCrees)
 
+#--------------------------------Main----------------------------------------------------------
+commissionChoisies = ['Finances de l’économie générale et du contrôle budgétaire', 'Lois', 'Affaires sociales', 'Affaires économiques']
+csvDeputes = input('Veuillez entrer le nom du fichier cvs avec les informations des députés svp (avec l\'extension) : ')
+mail = input('Veuillez entrer le nom du fichier avec votre mail rédigé et formaté (selon le formatage du README.md) avec l\'extension : ')
+tabDeputes = csv2tab(csvDeputes)
+print("{} mails ont été créé avec succès".format(modifMail(tabDeputes, mail)))
