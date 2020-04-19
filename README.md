@@ -31,9 +31,6 @@ Les champs personnalisés sont pour l'instant au nombre de 4 :
 À ce jour, le script ne peux pas prendre en charge des commissions avec différents déterminants.
 > ex : la commission **des** affaires étrangères ou bien la commision **de la** Défense nationale et forces armées
 
-À ce jour, il ne faut pas mettre de signe de ponctuation collé à un mot personnalisable.
-> ex : @nom@**,** ne fonctionnera pas.
-
 ## Utilisation du script
 Pour utiliser ce script, téléchargez tous les fichiers sur votre ordinateur dans un même dossier.
 Rendez le fichier deputes.py executable (sur ubuntu : clic droit / propiété / Permission / "Allow ewecuting file as program")
