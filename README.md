@@ -39,7 +39,7 @@ POUR LINUX : dans votre dossier : faites clic droit "ouvrir un terminal ici" pui
 
 entrez votre adresse email
 votre mot de passe (attention, votre mot de passe est confidenciel, ne le mettez pas n'importe où. Ne le mettez que si vous avez vraiment confiance en ce logiciel.
- Si votre email n'est ni en xxx@live.fr, ni en xxx@hotmail.fr, ni en xxx@gmail.com, on vous demandera d'entrer les parametres SMTP de votre fournisseur de mail : [https://www.commentcamarche.net/faq/893-parametres-de-serveurs-pop-imap-et-smtp-des-principaux-fai](VOIR ICI)
+ Si votre email n'est ni en xxx@live.fr, ni en xxx@hotmail.fr, ni en xxx@gmail.com, on vous demandera d'entrer les parametres SMTP de votre fournisseur de mail : ([https://www.commentcamarche.net/faq/893-parametres-de-serveurs-pop-imap-et-smtp-des-principaux-fai](VOIR ICI))
 
 ATTENTION, si vous ne modifiez rien, le simple fait de lancer le script et de rentrer vos infos perso (email...) envoit directement un mail à tous les députés. Ne le lancez pas sans être sur de votre mail !
 
