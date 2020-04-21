@@ -23,7 +23,7 @@ Les députés pouvant être des hommes ou des femmes, les mots genrés doivent �
 Les champs personnalisés sont pour l'instant au nombre de 4 : 
 @politesse@ qui donnera "madame", si c'est une députée ou "monsieur", si c'est un député.
 @nom@ qui sera remplacé par le nom du député
-@fonction@ qui sera remplacé par la fonction su député dans sa commission permanante
+@fonction@ qui sera remplacé par la fonction du député dans sa commission permanante
 @commission@ qui sera remplacé par le nom de sa commission permanante.
 
 
