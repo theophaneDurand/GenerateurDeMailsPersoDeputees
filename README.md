@@ -33,18 +33,15 @@ Les champs personnalisés sont pour l'instant au nombre de 4 :
 
 ## Utilisation du script
 Pour utiliser ce script, téléchargez tous les fichiers sur votre ordinateur dans un même dossier.
-Rendez le fichier deputes.py executable (sur ubuntu : clic droit / propiété / Permission / "Allow ewecuting file as program")
-POUR UBUNUTU : dans votre dossier : faites clic droit "ouvrir un terminal ici" puis écrivez "./deputes.py"
-Répondez aux deux question :
-entrer le nom du fichier des données des députés (le fichier csv) avec l'extension
+Rendez le fichier email.py executable (sur ubuntu : clic droit / propiété / Permission / "Allow ewecuting file as program")
+modifiez le ficher mail.txt selon votre envie.
+POUR LINUX : dans votre dossier : faites clic droit "ouvrir un terminal ici" puis écrivez "./email.py"
 
-> ex : deputes.csv (par defaut)
+entrez votre adresse email
+votre mot de passe (attention, votre mot de passe est confidenciel, ne le mettez pas n'importe où. Ne le mettez que si vous avez vraiment confiance en ce logiciel.
+ Si votre email n'est ni en xxx@live.fr, ni en xxx@hotmail.fr, ni en xxx@gmail.com, on vous demandera d'entrer les parametres SMTP de votre fournisseur de mail : [https://www.commentcamarche.net/faq/893-parametres-de-serveurs-pop-imap-et-smtp-des-principaux-fai](VOIR ICI)
 
-entrer le nom du fichier mail (le fichier avec votre mail rédigé dans le bon formalisme) avec l'extension
-
-> ex : mail.txt (par defaut)
-
-Si vous avez entré les bons nom de fichers, vos fichiers txt pour chaque mails sont créés dans le dossier Mails
+ATTENTION, si vous ne modifiez rien, le simple fait de lancer le script et de rentrer vos infos perso (email...) envoit directement un mail à tous les députés. Ne le lancez pas sans être sur de votre mail !
 
 
 Si vous êtes sur windows j'ai pas testé mais voici un site qui explique comment executer un script python sur windows : 
